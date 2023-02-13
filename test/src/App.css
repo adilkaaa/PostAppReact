@@ -1,0 +1,25 @@
+.Header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: lightskyblue;
+  align-items: center;
+  height: 50px;
+}
+.Header a {
+  margin: 5px;
+}
+.Header .ava {
+  border-style: none;
+  border-radius: 25px;
+  margin: 5px;
+}
+.Header .header-navbar {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+.Header button{
+  height: 20px;
+  width: auto;
+  font-size: 12px;
+}
