@@ -23,3 +23,20 @@
   width: auto;
   font-size: 12px;
 }
+.posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.posts h4{
+  
+}
+.posts .post {
+  background-color: lightcoral;
+  
+}
+.posts span {
+  font-weight: 700;
+  justify-self:flex-end
+  
+}

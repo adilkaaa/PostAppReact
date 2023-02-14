@@ -5,6 +5,7 @@ import { Header } from './components/Header'
 import { Home } from './pages/Home'
 import { Login } from './pages/Login'
 import { CreatePost } from './pages/CreatePost'
+import { Posts } from './pages/Posts'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/sign-in' element={<Login/>}/>
           <Route path='/create-post' element={<CreatePost/>} />
+          <Route path='/posts' element={<Posts/>}/>
         </Routes>
 
       </Router>

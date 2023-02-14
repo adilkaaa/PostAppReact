@@ -5,12 +5,15 @@ import {addDoc, collection} from 'firebase/firestore'
 import {useAuthState} from 'react-firebase-hooks/auth'
 import { auth } from '../config';
 import { db } from '../config';
+import {useNavigate} from 'react-router-dom';
+
+
 export const CreatePostForm = () =>{
+    const navigate = useNavigate();
     const [user] = useAuthState(auth)
     const schema = yup.object().shape({
         title: yup.string().required('Write title of post!!!'),
-        description: yup.string().required('Write description of thr post'),
-        file: yup.mixed().required('file please')
+        description: yup.string().required('Write description of thr post')
       });
 
     const {register,handleSubmit} = useForm(
@@ -28,6 +31,7 @@ export const CreatePostForm = () =>{
         id: user.uid,
         username: user.displayName,
         })
+        navigate('/');
     }
 
     return <div>
