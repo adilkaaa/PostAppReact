@@ -25,12 +25,10 @@
 }
 .posts {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 33% 33% 33%;
   gap: 10px;
 }
-.posts h4{
-  
-}
+
 .posts .post {
   background-color: lightcoral;
   
@@ -39,4 +37,23 @@
   font-weight: 700;
   justify-self:flex-end
   
+}
+@media (max-width: 300px ) {
+  .posts{
+  grid-template-columns: 100%;
+  }
+  .posts .post{
+    background-color: lightskyblue;
+    margin: 10px;
+  }
+}
+@media (min-width:301px) and (max-width:500px) {
+  .posts{
+    grid-template-columns: 50% 50%;
+
+  }
+  .posts .post{
+    background-color: lightskyblue;
+
+  }
 }
